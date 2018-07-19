@@ -5,11 +5,8 @@ const API_URL = `https://api.github.com/users`;
 class Form {
   constructor(addCard, clearCards) {
     this.addCard = addCard;
-
     this.clearCards = clearCards;
-
     this.API_URL = '';
-
     this.searchTerm = '';
     this.searchInput = document.querySelector('input[name="search"]');
     this.searchInput.addEventListener('keyup', () => this.handleKeyUp(event));
@@ -22,8 +19,8 @@ class Form {
     this.form = document.querySelector('form');
     this.form.addEventListener('submit', () => this.handleSubmit(event));
   }
-  handleKeyUp(event) {
-    this.searchTerm = event.target.value.trim();
+  handleKeyUp(e) {
+    this.searchTerm = e.target.value.trim();
     this.API_URL = `${API_URL}/${this.searchTerm}`;
     this.submitButton.disabled = !this.searchTerm;
   }
