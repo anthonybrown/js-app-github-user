@@ -1,0 +1,26 @@
+{
+  "name": "js-webapp",
+  "version": "1.0.0",
+  "description": "A Github user finder app",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server && npm run watch"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Tony Brown",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
