@@ -8,6 +8,7 @@ class App {
 
   addCard(data) {
     this.cards = [...this.cards, data];
+
     CardList(this.cards);
   }
 }

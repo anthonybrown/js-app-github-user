@@ -1,9 +1,10 @@
 import { render } from './index';
+import Card from './Card';
 
 const CardList = (cards) => {
   const html = `
     <ul>
-      ${cards.map((card) => `<li>${card.name}</li>`).join('')}
+      ${cards.map((card) => Card(card)).join('')}
     </ul>
   `;
 
