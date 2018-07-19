@@ -3,8 +3,10 @@ import axios from 'axios';
 const API_URL = `https://api.github.com/users`;
 
 class Form {
-  constructor(addCard) {
+  constructor(addCard, clearCards) {
     this.addCard = addCard;
+
+    this.clearCards = clearCards;
 
     this.API_URL = '';
 
@@ -13,6 +15,9 @@ class Form {
     this.searchInput.addEventListener('keyup', () => this.handleKeyUp(event));
     this.submitButton = document.querySelector('button[type="submit"]');
     this.submitButton.disabled = !this.searchTerm;
+
+    this.clearButton = document.querySelector('button[type="button"]');
+    this.clearButton.addEventListener('click', () => this.clearCards());
 
     this.form = document.querySelector('form');
     this.form.addEventListener('submit', () => this.handleSubmit(event));
