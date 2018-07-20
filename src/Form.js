@@ -25,8 +25,8 @@ class Form {
     this.submitButton.disabled = !this.searchTerm;
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
     // console.log(event)
     axios
       .get(this.API_URL)
